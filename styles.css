@@ -11,25 +11,108 @@
     object-fit: cover;
 }
 
+/* General text color for everything else */
 body {
-    margin: 0;
+    margin: 20px; /* Adds 20px margin on all sides of the body */
+    line-height: 1.6;
+    color: palevioletred; /* Set font color to palevioletred */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
     overflow: hidden; /* Prevents scrollbars from appearing */
-}
-
-body {
     background-color: #eedddd; /* White fallback */
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
+/* Header styles (unchanged) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Curlz MT', sans-serif; /* Apply Brittanic Bold font */
+    color: blue; /* Set the font color to blue */
+    font-weight: bold; /* Ensure the font is bold */
 }
 
+/* Specific styles for the welcome note */
 .welcome-note {
     position: absolute;
     top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the text */
+    text-align: center;
+    color: #fff; /* Keep white text for the welcome note */
+    font-family: 'Vivaldi', cursive; /* Use Vivaldi font */
+    z-index: 1; /* Ensures the text is above the video */
+}
+
+.welcome-note h1 {
+    font-size: 45px; /* Set font size for the heading */
+    margin: 0;
+    font-weight: bold; /* Makes the heading bold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow effect to the text */
+    color: #fff; /* Keep white text for the welcome note heading */
+}
+
+.welcome-note p {
+    font-size: 45px; /* Set font size for the paragraph */
+    margin: 0;
+    font-weight: bold; /* Makes the paragraph bold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow effect to the text */
+    color: #fff; /* Keep white text for the welcome note paragraph */
+}
+
+/* About Me section */
+#about {
+    font-family: 'Georgia', serif; /* Use a unique font for the About Me section */
+    font-size: 18px; /* Optional: Adjust font size */
+    line-height: 1.8; /* Optional: Improve readability */
+    color: palevioletred; /* Set font color to palevioletred */
+}
+
+#about p {
+    font-family: 'Georgia', serif; /* Unique font for the paragraph */
+    font-size: 16px; /* Adjust paragraph size */
+    line-height: 1.8; /* Improve readability */
+    color: palevioletred; /* Set font color to palevioletred */
+}
+
+/* Projects Section */
+#projects {
+    font-family: 'Arial', sans-serif; /* Use a unique font for the Projects section */
+    font-size: 18px; /* Adjust font size */
+    line-height: 1.8; /* Improve readability */
+    color: palevioletred; /* Set font color to palevioletred */
+}
+
+#projects p {
+    font-family: 'Arial', sans-serif; /* Use a unique font for the paragraph */
+    font-size: 16px; /* Adjust paragraph size */
+    line-height: 1.8; /* Improve readability */
+    color: palevioletred; /* Set font color to palevioletred */
+}
+
+/* Contact Section */
+#contact {
+    font-family: 'Verdana', sans-serif; /* Use a unique font for the Contact section */
+    font-size: 18px; /* Adjust font size */
+    line-height: 1.8; /* Improve readability */
+    color: palevioletred; /* Set font color to palevioletred */
+}
+
+#contact p {
+    font-family: 'Verdana', sans-serif; /* Use a unique font for the paragraph */
+    font-size: 16px; /* Adjust paragraph size */
+    line-height: 1.8; /* Improve readability */
+    color: palevioletred; /* Set font color to palevioletred */
+}
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire screen */
+    z-index: -1; /* Places the video behind all other content */
+}
+.welcome-note {
+    position: absolute;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%); /* Centers the text */
     text-align: center;
@@ -58,19 +141,6 @@ body {
     color: #333;
 }
 
-#about {
-    font-family: 'Georgia', serif; /* Use a unique font for the About Me section */
-    font-size: 18px; /* Optional: Adjust font size */
-    line-height: 1.8; /* Optional: Improve readability */
-    color: #444; /* Optional: Slightly lighter text color */
-}
-
-#about p {
-    font-family: 'Georgia', serif; /* Unique font for the paragraph */
-    font-size: 16px; /* Adjust paragraph size */
-    line-height: 1.8; /* Improve readability */
-    color: #555555; /* Slightly lighter color for the paragraph */
-}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Curlz MT', sans-serif; /* Apply Brittanic Bold font */
@@ -94,3 +164,4 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold; /* Makes the paragraph bold */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow effect to the text */
 }
+
