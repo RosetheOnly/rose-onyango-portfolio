@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 50%;
     transform: translate(-50%, -50%); /* Centers the text */
     text-align: center;
-    color: #fff; /* Keep white text for the welcome note */
+    color: blueviolet; /* Use blueviolet text for the welcome note */
     font-family: 'Vivaldi', cursive; /* Use Vivaldi font */
     z-index: 1; /* Ensures the text is above the video */
 }
@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     font-weight: bold; /* Makes the heading bold */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow effect to the text */
-    color: #fff; /* Keep white text for the welcome note heading */
+    color: blueviolet; /* Keep blueviolet text for the welcome note heading */
 }
 
 .welcome-note p {
@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     font-weight: bold; /* Makes the paragraph bold */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow effect to the text */
-    color: #fff; /* Keep white text for the welcome note paragraph */
+    color: blueviolet; /* Keep blueviolet text for the welcome note paragraph */
 }
 
 /* About Me section */
@@ -112,11 +112,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .welcome-note {
     position: absolute;
-    top: 60%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%); /* Centers the text */
     text-align: center;
-    color: #fff; /* White text for contrast */
+    color: blueviolet; /* Blueviolet text for contrast */
     font-family: 'Vivaldi', cursive; /* Use Vivaldi font */
     z-index: 1; /* Ensures the text is above the video */
 }
