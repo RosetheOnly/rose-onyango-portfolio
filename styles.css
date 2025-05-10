@@ -1,167 +1,409 @@
+/* Modern, professional styling */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --text-color: #333;
+    --text-light: #7f8c8d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* Header styles */
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--secondary-color);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Hero section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.8));
+    color: white;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--accent-color);
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #c0392b;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Section styling */
+section {
+    padding: 5rem 0;
+}
+
+section:nth-child(even) {
+    background-color: white;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    display: inline-block;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 3px;
+    background: var(--secondary-color);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* About section */
 .about-content {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 3rem;
 }
 
 .about-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; /* Makes the image circular */
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
     object-fit: cover;
+    border: 5px solid var(--secondary-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* General text color for everything else */
-body {
-    margin: 20px; /* Adds 20px margin on all sides of the body */
-    line-height: 1.6;
-    color: palevioletred; /* Set font color to palevioletred */
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    overflow: hidden; /* Prevents scrollbars from appearing */
-    background-color: #eedddd; /* White fallback */
+.about-text {
+    flex: 1;
 }
 
-/* Header styles (unchanged) */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Curlz MT', sans-serif; /* Apply Brittanic Bold font */
-    color: blue; /* Set the font color to blue */
-    font-weight: bold; /* Ensure the font is bold */
+.about-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
 }
 
-/* Specific styles for the welcome note */
-.welcome-note {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centers the text */
-    text-align: center;
-    color: blueviolet; /* Use blueviolet text for the welcome note */
-    font-family: 'Vivaldi', cursive; /* Use Vivaldi font */
-    z-index: 1; /* Ensures the text is above the video */
+.about-text p {
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
 }
 
-.welcome-note h1 {
-    font-size: 45px; /* Set font size for the heading */
-    margin: 0;
-    font-weight: bold; /* Makes the heading bold */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow effect to the text */
-    color: blueviolet; /* Keep blueviolet text for the welcome note heading */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
 }
 
-.welcome-note p {
-    font-size: 45px; /* Set font size for the paragraph */
-    margin: 0;
-    font-weight: bold; /* Makes the paragraph bold */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow effect to the text */
-    color: blueviolet; /* Keep blueviolet text for the welcome note paragraph */
+.skill {
+    background: var(--light-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
 }
 
-/* About Me section */
-#about {
-    font-family: 'Georgia', serif; /* Use a unique font for the About Me section */
-    font-size: 18px; /* Optional: Adjust font size */
-    line-height: 1.8; /* Optional: Improve readability */
-    color: palevioletred; /* Set font color to palevioletred */
+/* Projects section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
 }
 
-#about p {
-    font-family: 'Georgia', serif; /* Unique font for the paragraph */
-    font-size: 16px; /* Adjust paragraph size */
-    line-height: 1.8; /* Improve readability */
-    color: palevioletred; /* Set font color to palevioletred */
+.project-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Projects Section */
-#projects {
-    font-family: 'Arial', sans-serif; /* Use a unique font for the Projects section */
-    font-size: 18px; /* Adjust font size */
-    line-height: 1.8; /* Improve readability */
-    color: palevioletred; /* Set font color to palevioletred */
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-#projects p {
-    font-family: 'Arial', sans-serif; /* Use a unique font for the paragraph */
-    font-size: 16px; /* Adjust paragraph size */
-    line-height: 1.8; /* Improve readability */
-    color: palevioletred; /* Set font color to palevioletred */
+.project-image {
+    height: 200px;
+    background: var(--light-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
 }
 
-/* Contact Section */
-#contact {
-    font-family: 'Verdana', sans-serif; /* Use a unique font for the Contact section */
-    font-size: 18px; /* Adjust font size */
-    line-height: 1.8; /* Improve readability */
-    color: palevioletred; /* Set font color to palevioletred */
+.project-info {
+    padding: 1.5rem;
 }
 
-#contact p {
-    font-family: 'Verdana', sans-serif; /* Use a unique font for the paragraph */
-    font-size: 16px; /* Adjust paragraph size */
-    line-height: 1.8; /* Improve readability */
-    color: palevioletred; /* Set font color to palevioletred */
+.project-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
 }
-#background-video {
-    position: fixed;
-    top: 0;
-    left: 0;
+
+.project-info p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Contact section */
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.contact-text h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    color: var(--primary-color);
+}
+
+.contact-text p, .contact-text a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-text a:hover {
+    color: var(--secondary-color);
+}
+
+.contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the video covers the entire screen */
-    z-index: -1; /* Places the video behind all other content */
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
 }
-.welcome-note {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centers the text */
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Footer */
+footer {
+    background: var(--dark-color);
+    color: white;
     text-align: center;
-    color: blueviolet; /* Blueviolet text for contrast */
-    font-family: 'Vivaldi', cursive; /* Use Vivaldi font */
-    z-index: 1; /* Ensures the text is above the video */
+    padding: 2rem 0;
 }
 
-.welcome-note h1 {
-    font-size: 45px; /* Set font size for the heading */
-    margin: 0;
-    font-weight: bold; /* Makes the heading bold */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow effect to the text */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
 }
 
-.welcome-note p {
-    font-size: 45px; /* Set font size for the paragraph */
-    margin: 0;
-    font-weight: bold; /* Makes the paragraph bold */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow effect to the text */
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
 }
 
-body {
-    margin: 20px; /* Adds 20px margin on all sides of the body */
-    line-height: 1.6;
-    color: #333;
+.social-links a:hover {
+    color: var(--secondary-color);
 }
 
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Curlz MT', sans-serif; /* Apply Brittanic Bold font */
-    color: blue; /* Set the font color to blue */
-    font-weight: bold; /* Ensure the font is bold */
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    
+    header .container {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        margin-top: 1rem;
+    }
+    
+    nav ul li {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-image {
+        margin-bottom: 2rem;
+    }
+    
+    .skills {
+        justify-content: center;
+    }
 }
-
-/* Specific styles for the welcome note */
-.welcome-note h1 {
-    font-family: 'Vivaldi', cursive; /* Keep Vivaldi font for the welcome note heading */
-    font-size: 45px; /* Set font size for the heading */
-    margin: 0;
-    font-weight: bold; /* Makes the heading bold */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow effect to the text */
-}
-
-.welcome-note p {
-    font-family: 'Vivaldi', cursive; /* Keep Vivaldi font for the welcome note paragraph */
-    font-size: 45px; /* Set font size for the paragraph */
-    margin: 0;
-    font-weight: bold; /* Makes the paragraph bold */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow effect to the text */
-}
-
